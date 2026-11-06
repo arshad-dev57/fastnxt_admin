@@ -45,7 +45,7 @@ export default function LoginPage() {
           </span>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900">Platform Admin</h1>
           <p className="mt-1 text-[14px] text-slate-500">
-            BisonsEduCore360 — authorised operators only
+            FastNxt — authorised operators only
           </p>
         </div>
 

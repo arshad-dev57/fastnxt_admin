@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BisonsEduCore360 Admin",
+  title: "FastNxt Admin",
   description: "Platform admin console for registered schools",
 };
 

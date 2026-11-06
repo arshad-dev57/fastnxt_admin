@@ -159,7 +159,7 @@ export default function SchoolDetailPage() {
         <h2 className="mb-1 text-[15px] font-semibold">Manage access & plan</h2>
         <p className="mb-4 text-[13px] text-slate-500">
           Deactivating blocks every user of this school from signing in. Plan changes apply
-          immediately on the main BisonsEduCore360 app.
+          immediately on the main FastNxt app.
         </p>
 
         {actionError ? (

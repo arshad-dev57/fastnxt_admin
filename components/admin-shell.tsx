@@ -36,7 +36,7 @@ export default function AdminShell({ children }: { children: ReactNode }) {
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-white">
               <Shield className="h-4 w-4" />
             </span>
-            <span className="hidden sm:inline">BisonsEduCore Admin</span>
+            <span className="hidden sm:inline">FastNxt Admin</span>
           </Link>
           <nav className="ml-2 flex items-center gap-1">
             {NAV.map(({ href, label, Icon }) => {

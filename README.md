@@ -1,21 +1,14 @@
-# BisonsEduCore360 Admin
+# FastNxt Admin
 
-Platform console for BisonsTechs operators. View registered schools and subscription status.
+Platform console for FastNxt operators. View registered schools and subscription status.
 
 ## Allowed login
 
-Only this account can sign in (configured on the **API** via env vars):
-
-| Field | Value |
-|-------|--------|
-| Email | `adminbisonseducore360@gmail.com` |
-| Password | `BisonsAdmin@360` |
-
-Backend env:
+Only accounts listed on the **API** via env vars can sign in:
 
 ```bash
-PLATFORM_ADMIN_EMAILS=adminbisonseducore360@gmail.com
-PLATFORM_ADMIN_PASSWORD=BisonsAdmin@360
+PLATFORM_ADMIN_EMAILS=
+PLATFORM_ADMIN_PASSWORD=
 PLATFORM_COOKIE_NAME=bisons_platform_session
 ```
 

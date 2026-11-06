@@ -64,7 +64,7 @@ export default function DashboardPage() {
       <div>
         <h1 className="text-2xl font-bold tracking-tight">Dashboard</h1>
         <p className="mt-1 text-[14px] text-slate-500">
-          Overview of schools registered on BisonsEduCore360.
+          Overview of schools registered on FastNxt.
         </p>
       </div>
 
