@@ -270,6 +270,44 @@ export default function SchoolDetailPage() {
         </div>
       </section>
 
+      <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+        <h2 className="mb-1 text-[15px] font-semibold">Admission form</h2>
+        <p className="mb-4 text-[13px] text-slate-500">
+          Enable the A+ INSTITUTE IT & Law paper form for this school only. Other schools keep the standard admission form.
+        </p>
+        <div className="flex flex-col gap-3 rounded-xl border border-slate-100 bg-slate-50 p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-[13px] font-semibold text-slate-800">
+              {school.admissionForm?.enabled ? "A+ IT & Law form is on" : "Standard admission form"}
+            </p>
+            <p className="mt-1 text-[12px] text-slate-500">
+              CNIC, programs (LLB, IT, 9th/10th), Matric / Intermediate / LAT, fees and document checklist.
+            </p>
+          </div>
+          <button
+            type="button"
+            disabled={busy !== null}
+            onClick={() => {
+              const next = !school.admissionForm?.enabled;
+              runAction(
+                "admission",
+                () => platformApi.setAdmissionForm(school.id, next),
+                next ? "A+ admission form enabled for this school." : "Standard admission form restored."
+              );
+            }}
+            className={`h-10 shrink-0 rounded-xl px-4 text-[13px] font-semibold text-white disabled:opacity-60 ${
+              school.admissionForm?.enabled ? "bg-slate-700 hover:bg-slate-800" : "bg-indigo-600 hover:bg-indigo-700"
+            }`}
+          >
+            {busy === "admission"
+              ? "Saving…"
+              : school.admissionForm?.enabled
+                ? "Use standard form"
+                : "Enable A+ form"}
+          </button>
+        </div>
+      </section>
+
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {counts.map((c) => (
           <div key={c.label} className="rounded-2xl border border-slate-200 bg-white p-3 text-center shadow-sm">

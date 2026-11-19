@@ -58,6 +58,10 @@ export type SchoolDetail = {
   isActive: boolean;
   createdAt: string;
   updatedAt: string;
+  admissionForm?: {
+    variant: string;
+    enabled: boolean;
+  };
   counts: {
     users: number;
     students: number;
@@ -192,5 +196,11 @@ export const platformApi = {
     request<{ school: SchoolDetail }>(`/platform/schools/${id}/set-plan`, {
       method: "POST",
       body: JSON.stringify({ plan }),
+    }),
+
+  setAdmissionForm: (id: string, enabled: boolean) =>
+    request<{ school: SchoolDetail }>(`/platform/schools/${id}/admission-form`, {
+      method: "PATCH",
+      body: JSON.stringify({ enabled }),
     }),
 };
